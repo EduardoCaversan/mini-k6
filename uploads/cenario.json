@@ -1,0 +1,27 @@
+{
+  "concurrent_users": 5,
+  "duration_seconds": 10,
+  "max_requests": 50,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts"
+    },
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/1"
+    },
+    {
+      "method": "POST",
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1
+      }
+    }
+  ]
+}
