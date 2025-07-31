@@ -37,11 +37,36 @@ Compile ou execute diretamente com:
 go run main.go
 ````
 
-Você pode configurar o endpoint e o número de requisições diretamente no código:
+### Exemplo de Entrada
 
-```go
-url := "https://seu-endpoint.com"
-numRequests := 100
+```json
+{
+  "concurrent_users": 5,
+  "duration_seconds": 10,
+  "max_requests": 50,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts"
+    },
+    {
+      "method": "GET",
+      "url": "https://jsonplaceholder.typicode.com/posts/1"
+    },
+    {
+      "method": "POST",
+      "url": "https://jsonplaceholder.typicode.com/posts",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "title": "foo",
+        "body": "bar",
+        "userId": 1
+      }
+    }
+  ]
+}
 ```
 
 ### Exemplo de Saída
